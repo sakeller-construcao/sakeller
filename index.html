@@ -17,7 +17,10 @@
     /* HERO */
     .hero {
       height: 100vh;
-      background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover no-repeat;
+      background: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover no-repeat;
+
       display: flex;
       align-items: center;
       justify-content: center;
@@ -25,23 +28,39 @@
       color: white;
     }
 
+    .overlay-box {
+      background: rgba(10, 31, 61, 0.75);
+      padding: 50px 70px;
+      border-radius: 10px;
+      backdrop-filter: blur(6px);
+      max-width: 700px;
+    }
+
     .hero h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 50px;
+      font-size: 48px;
       margin-bottom: 10px;
+      letter-spacing: 2px;
     }
 
     .hero p {
       font-size: 18px;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
     .btn {
+      background: white;
+      color: #0A1F3D;
+      padding: 14px 30px;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
       background: #0A1F3D;
       color: white;
-      padding: 14px 28px;
-      text-decoration: none;
-      border-radius: 4px;
     }
 
     /* SEÇÕES */
@@ -59,22 +78,28 @@
     /* DIFERENCIAIS */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
       max-width: 1000px;
       margin: auto;
     }
 
     .card {
-      padding: 20px;
+      padding: 30px;
       border: 1px solid #eee;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
     }
 
     /* CTA */
     .cta {
       background: #0A1F3D;
       color: white;
-      padding: 60px 20px;
+      padding: 80px 20px;
+      text-align: center;
     }
 
     footer {
@@ -89,10 +114,10 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div>
+  <div class="overlay-box">
     <h1>SÁKELLER CONSTRUÇÃO</h1>
     <p>Excelência em obras de alto padrão</p>
-    <a href="https://wa.me/SEUNUMERO" class="btn">Solicitar orçamento</a>
+    <a href="https://wa.me/5527SEUNUMERO" class="btn">Solicitar orçamento</a>
   </div>
 </section>
 
@@ -108,7 +133,7 @@
   <div class="grid">
     <div class="card">Alto padrão de acabamento</div>
     <div class="card">Gestão completa da obra</div>
-    <div class="card">Cumprimento de prazos</div>
+    <div class="card">Cumprimento rigoroso de prazos</div>
     <div class="card">Equipe especializada</div>
   </div>
 </section>
@@ -116,11 +141,11 @@
 <!-- CTA -->
 <section class="cta">
   <h2>Pronto para construir com excelência?</h2>
-  <a href="https://wa.me/SEUNUMERO" class="btn">Falar no WhatsApp</a>
+  <a href="https://wa.me/5527SEUNUMERO" class="btn">Falar no WhatsApp</a>
 </section>
 
 <footer>
-  © Sákeller Construção
+  © SÁKELLER Construção
 </footer>
 
 </body>
